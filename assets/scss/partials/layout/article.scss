@@ -388,6 +388,14 @@
         word-break: break-all;
         padding: var(--card-padding);
         border-radius: 5px;
+        ::-webkit-scrollbar-thumb {
+            visibility: hidden;
+        }
+        &:hover {
+            ::-webkit-scrollbar-thumb {
+                visibility: visible;
+            }
+        }
 
         code {
             color: unset;
@@ -402,6 +410,14 @@
         padding: var(--card-padding);
         border-radius: 5px;
         position: relative;
+        ::-webkit-scrollbar-thumb {
+            visibility: hidden;
+        }
+        &:hover {
+            ::-webkit-scrollbar-thumb {
+                visibility: visible;
+            }
+        }
 
         &:hover {
             .copyCodeButton {

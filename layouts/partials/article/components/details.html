@@ -31,7 +31,9 @@
                 </time>
             </div>
 
-            {{- if ne .Lastmod .Date -}}
+            {{ $date := .Date.Format "2006-01-02" }}
+            {{ $lastmod := .Lastmod.Format "2006-01-02" }}
+            {{- if and (ne $lastmod $date) (gt .Lastmod .Date) -}}
             <div>
                 {{ partial "helper/icon" "edit" }}
                 <time class="article-time--lastmod">
